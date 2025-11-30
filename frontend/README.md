@@ -2,7 +2,7 @@
 
 Frontend desenvolvido em React + TypeScript + Vite com autenticação JWT e proteção de rotas.
 
-## 🚀 Tecnologias
+## Tecnologias
 
 - **React 18** - Biblioteca UI
 - **TypeScript** - Tipagem estática
@@ -11,12 +11,12 @@ Frontend desenvolvido em React + TypeScript + Vite com autenticação JWT e prot
 - **Axios** - Cliente HTTP
 - **Tailwind CSS** - Estilização
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 - Node.js 18+ e npm/yarn
 - Backend rodando em `http://localhost:8080`
 
-## ⚙️ Configuração
+## Configuração
 
 ### 1. Instalar dependências
 
@@ -36,7 +36,7 @@ Edite `.env`:
 VITE_API_URL=http://localhost:8080/api
 ```
 
-## 🏃 Executar Aplicação
+## Executar Aplicação
 
 ```bash
 npm run dev
@@ -44,14 +44,14 @@ npm run dev
 
 A aplicação estará disponível em `http://localhost:5173`
 
-## 🔨 Build para Produção
+## Build para Produção
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## 📚 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 frontend/
@@ -92,29 +92,29 @@ frontend/
 └── tailwind.config.js
 ```
 
-## 🔐 Funcionalidades
+## Funcionalidades
 
 ### Autenticação
-- ✅ Login e registro com validação
-- ✅ JWT access token (24h) + refresh token (7d)
-- ✅ Auto-refresh automático quando token expira
-- ✅ Logout com limpeza de localStorage
-- ✅ Proteção de rotas baseada em role
+- Login e registro com validação
+- JWT access token (24h) + refresh token (7d)
+- Auto-refresh automático quando token expira
+- Logout com limpeza de localStorage
+- Proteção de rotas baseada em role
 
 ### Candidato
-- ✅ Buscar vagas com filtros (título, localização, tipo, salário)
-- ✅ Ver detalhes da vaga
-- ✅ Candidatar-se (apenas uma vez por vaga)
-- ✅ Ver minhas candidaturas com status
+- Buscar vagas com filtros (título, localização, tipo, salário)
+- Ver detalhes da vaga
+- Candidatar-se (apenas uma vez por vaga)
+- Ver minhas candidaturas com status
 
 ### Recrutador (Admin)
-- ✅ Criar, editar, deletar vagas
-- ✅ Alterar status da vaga (aberta/fechada/arquivada)
-- ✅ Ver lista de vagas criadas
-- ✅ Ver candidatos por vaga
-- ✅ Atualizar status de candidatura
+- Criar, editar, deletar vagas
+- Alterar status da vaga (aberta/fechada/arquivada)
+- Ver lista de vagas criadas
+- Ver candidatos por vaga
+- Atualizar status de candidatura
 
-## 🛡️ Proteção de Rotas
+## Proteção de Rotas
 
 ### Navegação Automática
 - Usuário logado tentando acessar `/login` ou `/register` → redireciona para dashboard
@@ -127,7 +127,7 @@ frontend/
 - Atualizar página NÃO desloga o usuário
 - Token refresh automático mantém sessão ativa
 
-## 🎨 Rotas
+## Rotas
 
 ```
 # Públicas (com redirecionamento se autenticado)
@@ -146,7 +146,7 @@ frontend/
 /admin/jobs/:id/applications    # Candidatos da vaga
 ```
 
-## 📝 Scripts
+## Scripts
 
 ```bash
 npm run dev         # Desenvolvimento
@@ -155,7 +155,7 @@ npm run preview     # Preview build
 npm run lint        # Lint código
 ```
 
-## 🔄 Auto-Refresh de Token
+## Auto-Refresh de Token
 
 O sistema implementa refresh automático:
 
@@ -164,16 +164,16 @@ O sistema implementa refresh automático:
 3. Retenta requisição original com novo token
 4. Se refresh falhar → logout + redirect `/login`
 
-## 🎯 Diferenças por Role
+## Diferenças por Role
 
 | Funcionalidade | Candidato | Admin |
 |----------------|-----------|-------|
-| Criar vagas | ❌ | ✅ |
-| Editar vagas | ❌ | ✅ |
-| Candidatar-se | ✅ | ❌ |
-| Ver candidatos | ❌ | ✅ |
-| Atualizar status candidatura | ❌ | ✅ |
+| Criar vagas | Não | Sim |
+| Editar vagas | Não | Sim |
+| Candidatar-se | Sim | Não |
+| Ver candidatos | Não | Sim |
+| Atualizar status candidatura | Não | Sim |
 
-## 📝 License
+## License
 
 MIT

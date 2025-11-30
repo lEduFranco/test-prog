@@ -50,14 +50,11 @@ export const Register: React.FC = () => {
 
   return (
     <div className="min-h-screen flex">
-      {/* Left side - Illustration */}
       <div className="hidden lg:flex flex-1 bg-gradient-to-br from-indigo-600 via-purple-700 to-pink-700 items-center justify-center p-12 relative overflow-hidden">
-        {/* Animated background circles */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
         
-        {/* Content */}
         <div className="relative z-10 text-white text-center max-w-lg">
           <h1 className="text-5xl font-bold mb-6 animate-fade-in">
             Comece Agora
@@ -88,10 +85,8 @@ export const Register: React.FC = () => {
         </div>
       </div>
 
-      {/* Right side - Form */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-md w-full space-y-8 animate-fade-in">
-          {/* Logo and Header */}
           <div className="text-center">
             <div className="mx-auto h-16 w-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl flex items-center justify-center mb-4 transform hover:scale-110 transition-transform duration-300">
               <svg className="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,9 +104,7 @@ export const Register: React.FC = () => {
             </p>
           </div>
 
-          {/* Form */}
           <form className="mt-8 space-y-5" onSubmit={handleSubmit(onSubmit)}>
-            {/* Email Field */}
             <div className="group">
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                 Email
@@ -141,7 +134,6 @@ export const Register: React.FC = () => {
               )}
             </div>
 
-            {/* Password Field */}
             <div className="group">
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
                 Senha
@@ -171,7 +163,6 @@ export const Register: React.FC = () => {
               )}
             </div>
 
-            {/* Confirm Password Field */}
             <div className="group">
               <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1">
                 Confirmar Senha
@@ -198,7 +189,6 @@ export const Register: React.FC = () => {
               )}
             </div>
 
-            {/* Role Selection */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-3">
                 Tipo de Conta
@@ -246,7 +236,6 @@ export const Register: React.FC = () => {
               </div>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={isSubmitting}

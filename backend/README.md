@@ -2,7 +2,7 @@
 
 Backend desenvolvido em Go com Gin Framework, GORM e PostgreSQL.
 
-## ⚡ Quick Start
+## Quick Start
 
 ```bash
 git clone <repo-url>
@@ -16,7 +16,7 @@ make setup      # Faz tudo automaticamente!
 
 ---
 
-## 🚀 Tecnologias
+## Tecnologias
 
 - **Go 1.21+**
 - **Gin Web Framework** - HTTP router
@@ -25,13 +25,13 @@ make setup      # Faz tudo automaticamente!
 - **JWT** - Autenticação com access e refresh tokens
 - **Docker & Docker Compose** - Containerização
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 - **Go 1.21+** - [Instalar Go](https://go.dev/doc/install)
 - **PostgreSQL 15** (ou Docker)
 - **Make** - Para comandos simplificados
 
-## ⚙️ Configuração
+## Configuração
 
 ### 1. Configurar variáveis de ambiente
 
@@ -64,9 +64,9 @@ make swagger-install   # Instala Swagger CLI
 make swagger           # Gera documentação Swagger
 ```
 
-## 🏃 Executar Aplicação
+## Executar Aplicação
 
-### 🚀 Setup Completo em Um Comando (Recomendado)
+### Setup Completo em Um Comando (Recomendado)
 
 Para fazer **tudo de uma vez** (instalação, configuração, docker e seed):
 
@@ -75,16 +75,16 @@ make setup
 ```
 
 **O que este comando faz:**
-1. ✅ Instala dependências Go
-2. ✅ Instala Swagger CLI
-3. ✅ Gera documentação Swagger
-4. ✅ Sobe containers Docker (build + up)
-5. ✅ Aguarda containers ficarem prontos
-6. ✅ Popula banco com dados de exemplo
+1. Instala dependências Go
+2. Instala Swagger CLI
+3. Gera documentação Swagger
+4. Sobe containers Docker (build + up)
+5. Aguarda containers ficarem prontos
+6. Popula banco com dados de exemplo
 
-**Resultado:** Aplicação pronta em ~30 segundos! 🎉
+**Resultado:** Aplicação pronta em ~30 segundos!
 
-### ⚙️ Setup Manual (Passo a Passo)
+### Setup Manual (Passo a Passo)
 
 Se preferir executar cada etapa separadamente:
 
@@ -96,14 +96,14 @@ make docker-up        # 4. Subir containers
 make seed             # 5. Popular com dados
 ```
 
-### 🌐 Acesso
+### Acesso
 
 Após o setup, a aplicação estará disponível em:
 - **API**: http://localhost:8080
 - **Swagger UI**: http://localhost:8080/docs/index.html
 - **Health Check**: http://localhost:8080/health
 
-## 🌱 Dados de Exemplo (Seed)
+## Dados de Exemplo (Seed)
 
 O comando `make seed` cria usuários e vagas de exemplo:
 
@@ -124,7 +124,7 @@ O comando `make seed` cria usuários e vagas de exemplo:
 - Tech Lead - Desenvolvimento (Híbrido)
 - Estágio em Desenvolvimento Web (Presencial)
 
-## 📚 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 backend/
@@ -163,7 +163,7 @@ backend/
 └── README.md
 ```
 
-## 🔌 Endpoints da API
+## Endpoints da API
 
 ### Auth
 
@@ -194,7 +194,7 @@ GET    /api/applications/my-applications    # Minhas candidaturas [Candidate onl
 PUT    /api/applications/:id                # Atualizar status [Admin only]
 ```
 
-## 🔒 Autenticação
+## Autenticação
 
 ### Registro
 
@@ -241,46 +241,46 @@ curl -X GET http://localhost:8080/api/auth/me \
   -H "Authorization: Bearer eyJhbGc..."
 ```
 
-## 🛠️ Comandos Make
+## Comandos Make
 
 ### Setup e Inicialização
 
 ```bash
-make setup             # 🚀 Setup completo (tudo de uma vez)
-make install           # 📦 Instalar dependências
-make swagger-install   # 🔧 Instalar Swagger CLI
-make swagger           # 📝 Gerar documentação Swagger
-make docker-up         # 🐳 Subir containers
-make seed              # 🌱 Popular banco com dados
+make setup             # Setup completo (tudo de uma vez)
+make install           # Instalar dependências
+make swagger-install   # Instalar Swagger CLI
+make swagger           # Gerar documentação Swagger
+make docker-up         # Subir containers
+make seed              # Popular banco com dados
 ```
 
 ### Desenvolvimento
 
 ```bash
-make run               # ▶️  Executar localmente (sem Docker)
-make build             # 🔨 Build binary
-make test              # 🧪 Executar testes
-make docker-logs       # 📋 Ver logs do Docker
+make run               # Executar localmente (sem Docker)
+make build             # Build binary
+make test              # Executar testes
+make docker-logs       # Ver logs do Docker
 ```
 
 ### Gerenciamento Docker
 
 ```bash
-make docker-down           # ⏹️  Parar containers
-make docker-restart        # 🔄 Reiniciar containers
-make docker-rebuild        # 🔁 Rebuild completo
-make docker-down-clean     # 🧹 Parar e limpar banco
-make reset                 # 🔄 Reset completo (limpar + setup)
+make docker-down           # Parar containers
+make docker-restart        # Reiniciar containers
+make docker-rebuild        # Rebuild completo
+make docker-down-clean     # Parar e limpar banco
+make reset                 # Reset completo (limpar + setup)
 ```
 
 ### Outros
 
 ```bash
-make help              # ❓ Mostrar todos os comandos
-make clean             # 🗑️  Limpar arquivos de build
+make help              # Mostrar todos os comandos
+make clean             # Limpar arquivos de build
 ```
 
-## 📖 Documentação da API (Swagger)
+## Documentação da API (Swagger)
 
 ### Setup Rápido
 
@@ -296,16 +296,16 @@ make run               # 4. Iniciar servidor
 - **Swagger UI**: http://localhost:8080/docs/index.html
 - **JSON Spec**: http://localhost:8080/docs/doc.json
 
-### 🔐 Testar Endpoints Autenticados
+### Testar Endpoints Autenticados
 
 1. Abra o Swagger UI
 2. Use `/api/auth/register` ou `/api/auth/login`
 3. Copie o `access_token` da resposta
-4. Clique em **"Authorize"** 🔒
+4. Clique em **"Authorize"**
 5. Digite: `Bearer {seu_access_token}`
 6. Teste os endpoints protegidos!
 
-### 🔄 Atualizar Documentação
+### Atualizar Documentação
 
 Se você modificar os handlers, regenere a documentação:
 
@@ -313,7 +313,7 @@ Se você modificar os handlers, regenere a documentação:
 make swagger
 ```
 
-## 🗄️ Banco de Dados
+## Banco de Dados
 
 As migrations rodam automaticamente ao iniciar a aplicação.
 
@@ -329,11 +329,11 @@ As migrations rodam automaticamente ao iniciar a aplicação.
 - Um candidato só pode se candidatar uma vez por vaga
 - Soft delete em todos os modelos
 
-## 🔐 Roles
+## Roles
 
 - **admin**: Pode criar, editar, deletar vagas e gerenciar candidaturas
 - **candidate**: Pode se candidatar a vagas e ver suas candidaturas
 
-## 📝 License
+## License
 
 MIT
