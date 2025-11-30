@@ -16,7 +16,6 @@ code {
     monospace;
 }
 
-/* Utility for line clamping */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -31,7 +30,6 @@ code {
   overflow: hidden;
 }
 
-/* Animation delays */
 .animation-delay-200 {
   animation-delay: 0.2s;
 }

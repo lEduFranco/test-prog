@@ -1,8 +1,8 @@
-# 🎯 Sistema de Recrutamento & Seleção
+# Sistema de Recrutamento & Seleção
 
 Sistema completo de recrutamento com backend em **Go** e frontend em **React + TypeScript**.
 
-## ⚡ Quick Start (30 segundos)
+## Quick Start (30 segundos)
 
 ### **Opção 1: Setup Automático (Recomendado)**
 
@@ -13,11 +13,11 @@ make setup
 ```
 
 Isso vai:
-- ✅ Instalar todas as dependências
-- ✅ Gerar documentação Swagger
-- ✅ Subir containers Docker (PostgreSQL + Backend)
-- ✅ Popular banco com dados de exemplo
-- ✅ Deixar tudo pronto para uso!
+- Instalar todas as dependências
+- Gerar documentação Swagger
+- Subir containers Docker (PostgreSQL + Backend)
+- Popular banco com dados de exemplo
+- Deixar tudo pronto para uso!
 
 ### **Opção 2: Setup Manual**
 
@@ -38,7 +38,7 @@ npm run dev
 
 ---
 
-## 🌐 URLs de Acesso
+## URLs de Acesso
 
 Após o setup, acesse:
 
@@ -51,17 +51,17 @@ Após o setup, acesse:
 
 ---
 
-## 👤 Credenciais de Teste
+## Credenciais de Teste
 
 O comando `make seed` cria usuários de exemplo:
 
-### 🔑 Admin (Recrutador)
+### Admin (Recrutador)
 ```
 Email: admin@recruitment.com
 Senha: admin123
 ```
 
-### 👥 Candidatos
+### Candidatos
 ```
 Email: joao.silva@email.com
 Senha: candidate123
@@ -72,7 +72,7 @@ Senha: candidate123
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 test-prog/
@@ -102,7 +102,7 @@ test-prog/
 
 ---
 
-## 📐 Arquitetura do Sistema
+## Arquitetura do Sistema
 
 ### **Visão Geral**
 
@@ -424,13 +424,13 @@ graph LR
 
 ---
 
-## 🛠️ Comandos Úteis
+## Comandos Úteis
 
 ### **Backend**
 
 ```bash
 # Setup e Inicialização
-make setup             # 🚀 Setup completo automático
+make setup             # Setup completo automático
 make docker-up         # Subir containers
 make docker-down       # Parar containers
 make seed              # Popular banco com dados
@@ -457,7 +457,7 @@ npm run lint           # Verificar código
 
 ---
 
-## 🔧 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### **Backend**
 - **Go 1.21+** - Linguagem
@@ -481,43 +481,43 @@ npm run lint           # Verificar código
 
 ---
 
-## 📚 Funcionalidades
+## Funcionalidades
 
-### **Para Candidatos** 👤
-- ✅ Buscar vagas (com filtros inteligentes)
-- ✅ Ver detalhes das vagas
-- ✅ Candidatar-se a vagas
-- ✅ Acompanhar suas candidaturas
-- ✅ Filtros por: título, localização, tipo, salário
+### **Para Candidatos**
+- Buscar vagas (com filtros inteligentes)
+- Ver detalhes das vagas
+- Candidatar-se a vagas
+- Acompanhar suas candidaturas
+- Filtros por: título, localização, tipo, salário
 
-### **Para Recrutadores** 👨‍💼
-- ✅ Criar, editar e deletar vagas
-- ✅ Gerenciar vagas criadas
-- ✅ Ver candidatos por vaga
-- ✅ Atualizar status de candidaturas
-- ✅ Dashboard administrativo
+### **Para Recrutadores**
+- Criar, editar e deletar vagas
+- Gerenciar vagas criadas
+- Ver candidatos por vaga
+- Atualizar status de candidaturas
+- Dashboard administrativo
 
-### **Sistema** ⚙️
-- ✅ Autenticação JWT (access + refresh tokens)
-- ✅ Busca inteligente (ignora acentos e pontuação)
-- ✅ Validação de dados (backend + frontend)
-- ✅ Error handling robusto
-- ✅ UI/UX moderna com animações
-- ✅ Responsive design
-- ✅ API documentada (Swagger)
+### **Sistema**
+- Autenticação JWT (access + refresh tokens)
+- Busca inteligente (ignora acentos e pontuação)
+- Validação de dados (backend + frontend)
+- Error handling robusto
+- UI/UX moderna com animações
+- Responsive design
+- API documentada (Swagger)
 
 ---
 
-## 🔍 Exemplos de Uso
+## Exemplos de Uso
 
 ### **Busca Inteligente**
 
 A busca funciona mesmo sem acentos ou pontuação:
 
 ```
-✅ "desenvolvedor frontend" → Encontra "Desenvolvedor Front-End"
-✅ "estagio" → Encontra "Estágio em Programação"
-✅ "devops" → Encontra "DevOps Engineer"
+"desenvolvedor frontend" → Encontra "Desenvolvedor Front-End"
+"estagio" → Encontra "Estágio em Programação"
+"devops" → Encontra "DevOps Engineer"
 ```
 
 ### **Filtros Avançados**
@@ -532,7 +532,7 @@ Filtros:
 
 ---
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### **Porta 8080 já está em uso**
 
@@ -576,14 +576,14 @@ make docker-restart # Reiniciar backend
 
 ---
 
-## 📖 Documentação Detalhada
+## Documentação Detalhada
 
 - **Backend**: Veja [backend/README.md](./backend/README.md)
 - **API Docs**: http://localhost:8080/docs/index.html (após iniciar)
 
 ---
 
-## 🧪 Testes
+## Testes
 
 ### **Backend**
 
@@ -603,7 +603,7 @@ npm run test           # Se houver testes configurados
 
 ---
 
-## 🐳 Docker
+## Docker
 
 ### **Containers**
 
@@ -639,7 +639,7 @@ SELECT email, role FROM users;
 
 ---
 
-## 🎨 Paleta de Cores
+## Paleta de Cores
 
 O sistema usa gradientes modernos:
 
@@ -650,5 +650,5 @@ O sistema usa gradientes modernos:
 
 ---
 
-**Pronto para começar? Execute `cd backend && make setup` e em 30 segundos estará tudo rodando! 🚀**
+**Pronto para começar? Execute `cd backend && make setup` e em 30 segundos estará tudo rodando!**
 
