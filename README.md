@@ -114,10 +114,10 @@ graph TB
     
     subgraph "Backend Go"
         B[Gin Router]
-        C[Middlewares<br/>CORS + Auth + Role]
-        D[Handlers<br/>Auth/Jobs/Applications]
-        E[Repositories<br/>Data Access Layer]
-        F[Models<br/>Entities]
+        C[Middlewares: CORS + Auth + Role]
+        D[Handlers: Auth/Jobs/Applications]
+        E[Repositories: Data Access Layer]
+        F[Models: Entities]
     end
     
     subgraph "Database"
@@ -281,7 +281,7 @@ graph TB
     end
     
     subgraph "Context"
-        E[AuthContext<br/>User State]
+        E[AuthContext: User State]
     end
     
     subgraph "Pages"
@@ -308,7 +308,7 @@ graph TB
     end
     
     subgraph "API"
-        I[Axios Instance<br/>Base URL + Interceptors]
+        I[Axios Instance + Interceptors]
         J[Backend API]
     end
     
@@ -387,14 +387,14 @@ erDiagram
 
 ```mermaid
 graph LR
-    A[User digita:<br/>"desenvolvedor<br/>frontend"] --> B[Frontend:<br/>Envia query]
-    B --> C[Backend:<br/>NormalizeText]
-    C --> D["Remove acentos<br/>Remove pontuação<br/>Lowercase<br/>→ 'desenvolvedor frontend'"]
-    D --> E[Split em palavras:<br/>['desenvolvedor', 'frontend']]
-    E --> F[PostgreSQL Query:<br/>translate + LIKE]
-    F --> G[Compara com:<br/>"Desenvolvedor<br/>Front-End React"]
-    G --> H[Match! ✅<br/>Retorna vaga]
-    H --> I[Frontend exibe<br/>resultados]
+    A["User digita: desenvolvedor frontend"] --> B[Frontend envia query]
+    B --> C[Backend NormalizeText]
+    C --> D[Remove acentos e pontuação]
+    D --> E[Split em palavras]
+    E --> F[PostgreSQL translate LIKE]
+    F --> G[Match com Desenvolvedor Front-End]
+    G --> H[Retorna resultados]
+    H --> I[Frontend exibe cards]
     
     style A fill:#4f46e5,stroke:#6366f1,stroke-width:2px,color:#fff
     style D fill:#9333ea,stroke:#a855f7,stroke-width:2px,color:#fff
@@ -405,10 +405,10 @@ graph LR
 
 ```mermaid
 graph LR
-    A[Request] --> B{CORS<br/>Middleware}
-    B -->|Allow Origin| C{Auth<br/>Middleware}
-    C -->|Valid JWT?| D{Role<br/>Middleware}
-    D -->|Has Permission?| E[Handler<br/>Execute]
+    A[Request] --> B{CORS Middleware}
+    B -->|Allow Origin| C{Auth Middleware}
+    C -->|Valid JWT?| D{Role Middleware}
+    D -->|Has Permission?| E[Handler Execute]
     E --> F[Response]
     
     B -->|Block| G[403 Forbidden]
